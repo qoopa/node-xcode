@@ -19,35 +19,31 @@
 #
 -->
 
-# cordova-node-xcode
-
-[![NPM](https://nodei.co/npm/xcode.png?compact=true)](https://nodei.co/npm/xcode/)
-
-[![Node CI](https://github.com/apache/cordova-node-xcode/workflows/Node%20CI/badge.svg?branch=master)](https://github.com/apache/cordova-node-xcode/actions?query=branch%3Amaster)
+# node-xcode
 
 Parser utility for xcodeproj project files
 
 Allows you to edit xcodeproject files and write them back out.
 
-based on donated code from [alunny / node-xcode](https://github.com/alunny/node-xcode)
+Forked from: [apache/cordova-node-xcode](https://github.com/apache/cordova-node-xcode)
 
 ## Example
 
 ```js
 // API is a bit wonky right now
-var xcode = require('xcode'),
-    fs = require('fs'),
-    projectPath = 'myproject.xcodeproj/project.pbxproj',
-    myProj = xcode.project(projectPath);
+var xcode = require("xcode"),
+  fs = require("fs"),
+  projectPath = "myproject.xcodeproj/project.pbxproj",
+  myProj = xcode.project(projectPath);
 
 // parsing is async, in a different process
 myProj.parse(function (err) {
-    myProj.addHeaderFile('foo.h');
-    myProj.addSourceFile('foo.m');
-    myProj.addFramework('FooKit.framework');
-   
-    fs.writeFileSync(projectPath, myProj.writeSync());
-    console.log('new project written');
+  myProj.addHeaderFile("foo.h");
+  myProj.addSourceFile("foo.m");
+  myProj.addFramework("FooKit.framework");
+
+  fs.writeFileSync(projectPath, myProj.writeSync());
+  console.log("new project written");
 });
 ```
 
