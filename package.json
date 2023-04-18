@@ -1,11 +1,12 @@
 {
-  "author": "Apache Software Foundation",
-  "name": "xcode",
+  "author": "qoopa",
+  "name": "node-xcode",
   "description": "parser for xcodeproj/project.pbxproj files",
-  "version": "3.0.2-dev",
+  "version": "0.1.0",
   "main": "index.js",
-  "repository": "github:apache/cordova-node-xcode",
-  "bugs": "https://github.com/apache/cordova-node-xcode/issues",
+  "repository": {
+    "url": "https://github.com/qoopa/node-xcode.git"
+  },
   "engines": {
     "node": ">=10.0.0"
   },
